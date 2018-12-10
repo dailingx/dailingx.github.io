@@ -158,9 +158,9 @@
         Theme <a href="//github.com/wongminho/hexo-theme-miho" target="_blank">MiHo</a>
       &copy; 2018 dailingx<br>
       </p>
+      <span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
     </div>
   </div>
-  <span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
   <script>
     var now = new Date(); 
     function createtime() { 
@@ -176,7 +176,7 @@
         document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
     } 
     setInterval("createtime()",250);
-    </script>
+  </script>
 </footer>
     <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 <script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
