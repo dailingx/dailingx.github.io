@@ -122,7 +122,6 @@
     </h1>
   
 
-        
           
       </header>
     
@@ -162,62 +161,6 @@ Welcome to 。。Hexo! This is your very first post. Check documentation for mor
 
 
   
-    <article id="post-test" class="article article-type-post" itemscope="" itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/11/14/test/" target="_blank">PHP基础第一章</a>
-    </h1>
-  
-
-        
-          
-      </header>
-    
-    <div class="article-entry " itemprop="articleBody">
-      
-        <div class="article-img">
-            <a href="/2016/11/14/test/" target="_blank">
-                
-                <img src="http://yoursite.com/images/banner.jpg" alt="PHP基础第一章" title="PHP基础第一章">
-                
-            </a>
-        </div>
-        <div class="article-feed">
-            <p>
-                
-            </p>
-        </div>
-      
-        
-    </div>
-    <footer class="article-footer">
-        
-        <ul class="article-footer-menu">
-            
-                <li><i class="fa fa-calendar"></i>2016-11-14</li>
-            
-            
-  <li class="article-footer-tags">
-    <i class="fa fa-tags"></i>
-      
-    <a href="/tags/PHP/" class="color4">PHP</a>
-      
-  </li>
-
-        </ul>
-        
-            <a href="/2016/11/14/test/#more" class="article-more-link" target="_blank">more&gt;&gt;</a>
-        
-    </footer>
-  </div>
-</article>
-
-
-  
     <article id="post-test2" class="article article-type-post" itemscope="" itemprop="blogPost">
   <div class="article-inner">
     
@@ -229,7 +172,6 @@ Welcome to 。。Hexo! This is your very first post. Check documentation for mor
     </h1>
   
 
-        
           
               <span class="header-cate">
                 <i class="fa fa-map-marker"></i>
@@ -281,6 +223,61 @@ Welcome to 。。Hexo! This is your very first post. Check documentation for mor
 
 
   
+    <article id="post-test" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/11/14/test/" target="_blank">PHP基础第一章</a>
+    </h1>
+  
+
+          
+      </header>
+    
+    <div class="article-entry " itemprop="articleBody">
+      
+        <div class="article-img">
+            <a href="/2016/11/14/test/" target="_blank">
+                
+                <img src="http://yoursite.com/images/banner.jpg" alt="PHP基础第一章" title="PHP基础第一章">
+                
+            </a>
+        </div>
+        <div class="article-feed">
+            <p>
+                
+            </p>
+        </div>
+      
+        
+    </div>
+    <footer class="article-footer">
+        
+        <ul class="article-footer-menu">
+            
+                <li><i class="fa fa-calendar"></i>2016-11-14</li>
+            
+            
+  <li class="article-footer-tags">
+    <i class="fa fa-tags"></i>
+      
+    <a href="/tags/PHP/" class="color4">PHP</a>
+      
+  </li>
+
+        </ul>
+        
+            <a href="/2016/11/14/test/#more" class="article-more-link" target="_blank">more&gt;&gt;</a>
+        
+    </footer>
+  </div>
+</article>
+
+
+  
 
 </section>
         
@@ -297,14 +294,25 @@ Welcome to 。。Hexo! This is your very first post. Check documentation for mor
       </p>
     </div>
   </div>
+  <span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+  <script>
+    var now = new Date(); 
+    function createtime() { 
+        var grt= new Date("12/10/2018 20:08:00");//此处修改你的建站时间或者网站上线时间 
+        now.setTime(now.getTime()+250); 
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+        document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 "; 
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
+    } 
+    setInterval("createtime()",250);
+    </script>
 </footer>
-    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
-+</script>
-+<script type="text/javascript" src="/resources/love.js"></script>
-+<script type="text/javascript" src="/resources/float.js"></script>
-+<script type="text/javascript" src="/resources/typewriter.js"></script>
-+<script type="text/javascript" color="0,104,183" opacity="1" zindex="-1" count="50" src="/resources/love.js"></script>
-
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 <script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
 <script>
   var mihoConfig = {
@@ -414,5 +422,5 @@ Welcome to 。。Hexo! This is your very first post. Check documentation for mor
 
 
   </div>
-</body>
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"model":{"jsonPath":"live2d-widget-model-haruto"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
 </html>
