@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+  <title>hiho一下   第232周 | dailingx</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+    <meta name="keywords" content="dailingx,DaiXinliang's Blog">
+  
+  <meta name="description" content="题目1：拆字游戏时间限制:10000ms单点时限:1000ms内存限制:256MB 描述小Kui喜欢把别人的名字拆开来，比如“螺”就可以拆成“虫田糸”，小Kui的语文学的不是很好，于是她决定使用编程的方式来解决这个问题。给出一个01矩阵，1占据的部分即为需要拆的字，如果两个1分享一条边，那么它们连通。连通具有传递性，即如果a、b连通，b、c连通，则a、c连通。连通的一系列1被看做可以拆出的一块，现">
+<meta name="keywords" content="hihoCoder">
+<meta property="og:type" content="article">
+<meta property="og:title" content="hiho一下   第232周">
+<meta property="og:url" content="http://yoursite.com/2018/12/17/hihoCoder  Week232 question01/index.html">
+<meta property="og:site_name" content="dailingx">
+<meta property="og:description" content="题目1：拆字游戏时间限制:10000ms单点时限:1000ms内存限制:256MB 描述小Kui喜欢把别人的名字拆开来，比如“螺”就可以拆成“虫田糸”，小Kui的语文学的不是很好，于是她决定使用编程的方式来解决这个问题。给出一个01矩阵，1占据的部分即为需要拆的字，如果两个1分享一条边，那么它们连通。连通具有传递性，即如果a、b连通，b、c连通，则a、c连通。连通的一系列1被看做可以拆出的一块，现">
+<meta property="og:locale" content="default">
+<meta property="og:image" content="http://yoursite.com/images/getans1.png">
+<meta property="og:updated_time" content="2018-12-17T10:45:09.628Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="hiho一下   第232周">
+<meta name="twitter:description" content="题目1：拆字游戏时间限制:10000ms单点时限:1000ms内存限制:256MB 描述小Kui喜欢把别人的名字拆开来，比如“螺”就可以拆成“虫田糸”，小Kui的语文学的不是很好，于是她决定使用编程的方式来解决这个问题。给出一个01矩阵，1占据的部分即为需要拆的字，如果两个1分享一条边，那么它们连通。连通具有传递性，即如果a、b连通，b、c连通，则a、c连通。连通的一系列1被看做可以拆出的一块，现">
+<meta name="twitter:image" content="http://yoursite.com/images/getans1.png">
+  
+  
+    <link rel="icon" href="/favicon.jpg">
+  
+  <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/pace.min.js"></script>
+  
+
+  
+  
+
+</head>
+</html>
+<body>
+  <div id="container">
+      <header id="header">
+    <div id="banner"></div>
+    <div id="header-outer">
+        <div id="header-menu" class="header-menu-pos animated">
+            <div class="header-menu-container">
+                <a href="/" class="left">
+                    <span class="site-title">DaiXinliang&#39;s Blog</span>
+                </a>
+                <nav id="header-menu-nav" class="right">
+                    
+                    <a href="/">
+                        <i class="fa fa-home"></i>
+                        <span>Home</span>
+                    </a>
+                    
+                    <a href="/">
+                        <i class="fa fa-archive"></i>
+                        <span>Archives</span>
+                    </a>
+                    
+                    <a target="_blank" href="http://www.dailingx.cf/">
+                        <i class="fa fa-user"></i>
+                        <span>About</span>
+                    </a>
+                    
+                </nav>
+                <a class="mobile-header-menu-button">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+        </div>
+        <div id="header-row">
+            <div id="logo">
+                <a href="/">
+                    <img src="/images/logo.jpg" alt="logo">
+                </a>
+            </div>
+            <div class="header-info">
+                <div id="header-title">
+                    
+                    <h2>
+                        DaiXinliang&#39;s Blog
+                    </h2>
+                    
+                </div>
+                <div id="header-description">
+                    
+                    <h3>
+                        一个蒟蒻的博客，神犇勿喷
+                    </h3>
+                    
+                </div>
+            </div>
+            <nav class="header-nav">
+                <div class="social">
+                    
+                        <a title="CSDN" target="_blank" href="https://blog.csdn.net/daixinliangwyx">
+                            <i class="fa fa-home fa-2x"></i></a>
+                    
+                        <a title="Github" target="_blank" href="https://github.com/dailingx">
+                            <i class="fa fa-github fa-2x"></i></a>
+                    
+                        <a title="Weibo" target="_blank" href="https://weibo.com/6175177677/profile?rightmod=1&wvr=6&mod=personinfo&is_all=1">
+                            <i class="fa fa-weibo fa-2x"></i></a>
+                    
+                        <a title="Twitter" target="_blank" href="https://mobile.twitter.com/G2Ej9IKfFQTJjTv">
+                            <i class="fa fa-twitter fa-2x"></i></a>
+                    
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+      <div class="outer">
+        <section id="main" class="body-wrap"><article id="post-hihoCoder  Week232 question01" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="post-title" itemprop="name">
+      hiho一下   第232周
+    </h1>
+    <div class="post-title-bar">
+      <ul>
+          
+              <li>
+                  <i class="fa fa-book"></i>
+                  
+                      <a href="/categories/算法/">算法</a>
+                  
+              </li>
+          
+        <li>
+          <i class="fa fa-calendar"></i>  2018-12-17
+        </li>
+        <li>
+          <i class="fa fa-eye"></i>
+          <span id="busuanzi_value_page_pv"></span>
+        </li>
+      </ul>
+    </div>
+  
+
+          
+      </header>
+    
+    <div class="article-entry post-content" itemprop="articleBody">
+      
+            
+            <h2 id="题目1：拆字游戏"><a href="#题目1：拆字游戏" class="headerlink" title="题目1：拆字游戏"></a>题目1：拆字游戏</h2><p>时间限制:10000ms<br>单点时限:1000ms<br>内存限制:256MB</p>
+<p>描述<br>小Kui喜欢把别人的名字拆开来，比如“螺”就可以拆成“虫田糸”，小Kui的语文学的不是很好，于是她决定使用编程的方式来解决这个问题。给出一个01矩阵，1占据的部分即为需要拆的字，如果两个1分享一条边，那么它们连通。连通具有传递性，即如果a、b连通，b、c连通，则a、c连通。连通的一系列1被看做可以拆出的一块，现在小Kui需要输出这些拆出的块（用一个01矩阵表示，并且要求矩阵的大小尽可能的小）。为了确保输出的顺序尽可能的和书写的顺序一致，小Kui从每个块中选出最左上角的点（最左侧的点中，最靠上的）作为代表点，然后按照代表点从左到右（若相同则按从上到下）的顺序输出所有拆出的块。</p>
+<p><strong>输入</strong><br>输入的第一行为两个正整数N、M，表示01矩阵的大小。</p>
+<p>接下来N行，每行M个01字符，描述一个需要拆的字。</p>
+<p>对于40%的数据，满足1&lt;=N,M&lt;=10。</p>
+<p>对于100%的数据，满足1&lt;=N,M&lt;=500。</p>
+<p><strong>输出</strong><br>按照代表点从左到右（若相同则按从上到下）的顺序输出所有拆出的块。</p>
+<p>对于每个块，先输出其大小，然后用对应的01矩阵表示这个块。</p>
+<h2 id="样例"><a href="#样例" class="headerlink" title="样例"></a>样例</h2><table>
+<thead>
+<tr>
+<th style="text-align:left"><strong>样例输入</strong></th>
+<th style="text-align:left"><strong>样例输出</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">11 17<br>00000000000000000<br>00001111111100000<br>00000000000000000<br>00111111111111100<br>00000000100000000<br>00000010101110000<br>00000110100011000<br>00011100100001000<br>00000010100000000<br>00000001100000000<br>00000000000000000</td>
+<td style="text-align:left">7 13<br>1111111111111<br>0000001000000<br>0000001000000<br>0000001000000<br>0000001000000<br>0000001000000<br>0000011000000<br>3 4<br>0001<br>0011<br>1110<br>1 8<br>11111111<br>1 1<br>1<br>3 4<br>1110<br>0011<br>0001</td>
+</tr>
+</tbody>
+</table>
+<h2 id="额外的样例"><a href="#额外的样例" class="headerlink" title="额外的样例"></a>额外的样例</h2><table>
+<thead>
+<tr>
+<th style="text-align:left"><strong>样例输入</strong></th>
+<th style="text-align:left"><strong>样例输出</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">14 22<br>0000000000001111111100<br>0000000000001101101100<br>0000110000001111111100<br>0000110000001101101100<br>0111111110001111111100<br>0110110110000000000000<br>0110110110000011000000<br>0111111110001111111000<br>0000110000000001100000<br>0000110110001111111100<br>0111111111000111111000<br>0000000010001101101100<br>0000000000000001100000<br>0000000000000011100000</td>
+<td style="text-align:left">10 9<br>000110000<br>000110000<br>111111110<br>110110110<br>110110110<br>111111110<br>000110000<br>000110110<br>111111111<br>000000010<br>5 8<br>11111111<br>11011011<br>11111111<br>11011011<br>11111111<br>8 8<br>00110000<br>11111110<br>00011000<br>11111111<br>01111110<br>11011011<br>00011000<br>00111000</td>
+</tr>
+</tbody>
+</table>
+<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>赛时，一看到题目就觉得要逐点并查集合并一下，然后再将每个合并块输出，但实现起来还是颇为麻烦的。后来想想，自己还是想复杂了，直接逐点深搜或者广搜都行，注意要边搜边将已经搜过的块打好标记就是。C++选手刚转型Java选手，上来就拿Java试手，交了一发Java版dfs，结果TLE。没道理啊，考虑到bfs可能会快一点，于是转一手Java版bfs，还是TLE。看了好几遍，思路代码都没问题的呀，百思不得其解，莫非是Java语言本身运行的慢而题目却没有给Java增加额外的耗时，于是将我打回C++原形，写了两发C++的dfs和bfs，结果全都是TLE只过百分之40的数据。后来后来。。。才发现，C++里是我在双重循环里memset整个505<em>505的数组而造成极大的开销(Java里则是在双重循环里面new出505</em>505的数组)，改成预先定义好最大数组然后每次手动for循环重置数组就AC了。。。。</p>
+<p><img src="/images/getans1.png" alt="四发AC结果"><br>我的方法是把每次搜到的结果放到res数组里，并且在搜索时，每搜到一个点都需要判断当前点与sx,sy,px,py的大小，从而获得搜索路径的左上角坐标和左下角坐标进而得到搜到块的大小。</p>
+<blockquote>
+<p>原来memset要慎用！！！直接对最大数组memset(尤其是如果在循环里面需要多次重置!)，还不如手动对已知数组范围进行重置清零！！！<br>从此再也不敢用memset偷懒了(逃</p>
+</blockquote>
+<h2 id="我的代码"><a href="#我的代码" class="headerlink" title="我的代码"></a>我的代码</h2><h3 id="Java-nbsp-nbsp-nbsp-nbsp-dfs-bfs"><a href="#Java-nbsp-nbsp-nbsp-nbsp-dfs-bfs" class="headerlink" title="Java&nbsp;&nbsp;&nbsp;&nbsp;dfs/bfs"></a>Java&nbsp;&nbsp;&nbsp;&nbsp;dfs/bfs</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.io.BufferedInputStream;</span><br><span class="line"><span class="keyword">import</span> java.io.BufferedReader;</span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"><span class="keyword">import</span> java.io.InputStream;</span><br><span class="line"><span class="keyword">import</span> java.io.InputStreamReader;</span><br><span class="line"><span class="keyword">import</span> java.io.PrintWriter;</span><br><span class="line"><span class="keyword">import</span> java.math.BigInteger;</span><br><span class="line"><span class="keyword">import</span> java.util.StringTokenizer;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line">  <span class="keyword">public</span> <span class="keyword">static</span> InputReader in = <span class="keyword">new</span> InputReader(<span class="keyword">new</span> BufferedInputStream(System.in));</span><br><span class="line">  <span class="keyword">public</span> <span class="keyword">static</span> PrintWriter out = <span class="keyword">new</span> PrintWriter(System.out);</span><br><span class="line">  <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">char</span>[][] Map;</span><br><span class="line">  <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span>[][] res = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">505</span>][<span class="number">505</span>];</span><br><span class="line">  <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span>[][] vis = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">505</span>][<span class="number">505</span>];</span><br><span class="line">  <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> sx, sy, px, py;</span><br><span class="line">  <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> dx[] = &#123;<span class="number">1</span>, <span class="number">0</span>, -<span class="number">1</span>, <span class="number">0</span>&#125;;</span><br><span class="line">  <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> dy[] = &#123;<span class="number">0</span>, <span class="number">1</span>, <span class="number">0</span>, -<span class="number">1</span>&#125;;</span><br><span class="line">  <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> n, m;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">    String s;</span><br><span class="line">    Map = <span class="keyword">new</span> <span class="keyword">char</span>[<span class="number">505</span>][<span class="number">505</span>];</span><br><span class="line">    n = in.nextInt();</span><br><span class="line">    m = in.nextInt();</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++) &#123;</span><br><span class="line">      s = in.nextLine();</span><br><span class="line">      <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">1</span>; j &lt;= m; j++) &#123;</span><br><span class="line">        Map[i][j] = s.charAt(j - <span class="number">1</span>);</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">1</span>; j &lt;= m; j++) &#123;</span><br><span class="line">      <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (Map[i][j] == <span class="string">'1'</span>) &#123;</span><br><span class="line">          px = i;</span><br><span class="line">          py = j;</span><br><span class="line">          sx = i;</span><br><span class="line">          sy = j;</span><br><span class="line">          vis[i][j] = <span class="string">'2'</span>;</span><br><span class="line">          res[i][j] = <span class="number">1</span>;</span><br><span class="line">          dfs(i, j);</span><br><span class="line">          out.println((px - sx + <span class="number">1</span>) + <span class="string">" "</span> + (py - sy + <span class="number">1</span>));</span><br><span class="line">          out.flush();</span><br><span class="line">          <span class="keyword">for</span> (<span class="keyword">int</span> k = sx; k &lt;= px; k++) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> p = sy; p &lt;= py; p++) &#123;</span><br><span class="line">              out.print(res[k][p]);</span><br><span class="line">              out.flush();</span><br><span class="line">              <span class="keyword">if</span> (res[k][p] != <span class="number">0</span>)</span><br><span class="line">                res[k][p] = <span class="number">0</span>;</span><br><span class="line">              <span class="keyword">if</span> (vis[k][p] != <span class="number">0</span>)</span><br><span class="line">                vis[k][p] = <span class="number">0</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            out.println();</span><br><span class="line">            out.flush();</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    out.close();</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> y)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">4</span>; i++) &#123;</span><br><span class="line">      <span class="keyword">int</span> nx = x + dx[i];</span><br><span class="line">      <span class="keyword">int</span> ny = y + dy[i];</span><br><span class="line">      <span class="keyword">if</span> (nx &gt; <span class="number">0</span> &amp;&amp; nx &lt;= n &amp;&amp; ny &gt; <span class="number">0</span> &amp;&amp; ny &lt;= m &amp;&amp; vis[nx][ny] == <span class="number">0</span> &amp;&amp; Map[nx][ny] == <span class="string">'1'</span>) &#123;</span><br><span class="line">        vis[nx][ny] = <span class="number">1</span>;</span><br><span class="line">        res[nx][ny] = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">if</span> (nx &gt; px) &#123;</span><br><span class="line">          px = nx;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (ny &gt; py) &#123;</span><br><span class="line">          py = ny;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (nx &lt; sx) &#123;</span><br><span class="line">          sx = nx;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (ny &lt; sy) &#123;</span><br><span class="line">          sy = ny;</span><br><span class="line">        &#125;</span><br><span class="line">        Map[nx][ny] = <span class="string">'2'</span>;</span><br><span class="line">        dfs(nx, ny);</span><br><span class="line">        vis[nx][ny] = <span class="number">0</span>;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">Point</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> x, y;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">bfs</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> y)</span> </span>&#123;</span><br><span class="line">    Queue&lt;Point&gt; queue = <span class="keyword">new</span> LinkedList&lt;&gt;();</span><br><span class="line">    Point now = <span class="keyword">new</span> Point();</span><br><span class="line">    now.x = x;</span><br><span class="line">    now.y = y;</span><br><span class="line">    queue.add(now);</span><br><span class="line">    vis[x][y] = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span> (!queue.isEmpty()) &#123;</span><br><span class="line">      now = queue.poll();</span><br><span class="line">      out.flush();</span><br><span class="line">      <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">4</span>; i++) &#123;</span><br><span class="line">        Point next = <span class="keyword">new</span> Point();</span><br><span class="line">        next.x = now.x + dx[i];</span><br><span class="line">        next.y = now.y + dy[i];</span><br><span class="line">        <span class="keyword">if</span> (next.x &gt; <span class="number">0</span> &amp;&amp; next.x &lt;= n &amp;&amp; next.y &gt; <span class="number">0</span> &amp;&amp; next.y &lt;= m &amp;&amp; vis[next.x][next.y] == <span class="number">0</span></span><br><span class="line">            &amp;&amp; Map[next.x][next.y] == <span class="string">'1'</span>) &#123;</span><br><span class="line">          vis[next.x][next.y] = <span class="number">1</span>;</span><br><span class="line">          res[next.x][next.y] = <span class="number">1</span>;</span><br><span class="line">          <span class="keyword">if</span> (next.x &gt; px) &#123;</span><br><span class="line">            px = next.x;</span><br><span class="line">          &#125;</span><br><span class="line">          <span class="keyword">if</span> (next.y &gt; py) &#123;</span><br><span class="line">            py = next.y;</span><br><span class="line">          &#125;</span><br><span class="line">          <span class="keyword">if</span> (next.x &lt; sx) &#123;</span><br><span class="line">            sx = next.x;</span><br><span class="line">          &#125;</span><br><span class="line">          <span class="keyword">if</span> (next.y &lt; sy) &#123;</span><br><span class="line">            sy = next.y;</span><br><span class="line">          &#125;</span><br><span class="line">          Map[next.x][next.y] = <span class="string">'2'</span>;</span><br><span class="line">          queue.add(next);</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">InputReader</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> BufferedReader reader;</span><br><span class="line">    <span class="keyword">public</span> StringTokenizer tokenizer;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">InputReader</span><span class="params">(InputStream stream)</span> </span>&#123;</span><br><span class="line">      reader = <span class="keyword">new</span> BufferedReader(<span class="keyword">new</span> InputStreamReader(stream), <span class="number">32768</span>);</span><br><span class="line">      tokenizer = <span class="keyword">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">nextLine</span><span class="params">()</span> </span>&#123;</span><br><span class="line">      String str = <span class="keyword">null</span>;</span><br><span class="line">      <span class="keyword">try</span> &#123;</span><br><span class="line">        str = reader.readLine();</span><br><span class="line">      &#125; <span class="keyword">catch</span> (IOException e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">return</span> str;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">nextInt</span><span class="params">()</span> </span>&#123;</span><br><span class="line">      <span class="keyword">return</span> Integer.parseInt(next());</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="C-nbsp-nbsp-nbsp-nbsp-dfs"><a href="#C-nbsp-nbsp-nbsp-nbsp-dfs" class="headerlink" title="C++&nbsp;&nbsp;&nbsp;&nbsp;dfs"></a>C++&nbsp;&nbsp;&nbsp;&nbsp;dfs</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">char</span> Map[<span class="number">505</span>][<span class="number">505</span>];</span><br><span class="line"><span class="keyword">int</span> res[<span class="number">505</span>][<span class="number">505</span>];</span><br><span class="line"><span class="keyword">int</span> vis[<span class="number">505</span>][<span class="number">505</span>];</span><br><span class="line"><span class="keyword">int</span> sx, sy, px, py;</span><br><span class="line"><span class="keyword">int</span> dx[<span class="number">4</span>] = &#123;<span class="number">1</span>, <span class="number">0</span>, <span class="number">-1</span>, <span class="number">0</span>&#125;;</span><br><span class="line"><span class="keyword">int</span> dy[<span class="number">4</span>] = &#123;<span class="number">0</span>, <span class="number">1</span>, <span class="number">0</span>, <span class="number">-1</span>&#125;;</span><br><span class="line"><span class="keyword">int</span> n, m;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> y)</span> </span>&#123;</span><br><span class="line">  <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">4</span>; i++) &#123;</span><br><span class="line">    <span class="keyword">int</span> nx = x + dx[i];</span><br><span class="line">    <span class="keyword">int</span> ny = y + dy[i];</span><br><span class="line">    <span class="keyword">if</span>(nx &gt; <span class="number">0</span> &amp;&amp; nx &lt;= n &amp;&amp; ny &gt; <span class="number">0</span> &amp;&amp; ny &lt;= m &amp;&amp; vis[nx][ny] == <span class="number">0</span> &amp;&amp; Map[nx][ny] == <span class="string">'1'</span>) &#123;</span><br><span class="line">      vis[nx][ny] = <span class="number">1</span>;</span><br><span class="line">      res[nx][ny] = <span class="number">1</span>;</span><br><span class="line">      Map[nx][ny] = <span class="string">'2'</span>;</span><br><span class="line">      <span class="keyword">if</span>(nx &gt; px) &#123;</span><br><span class="line">        px = nx;</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">if</span>(ny &gt; py) &#123;</span><br><span class="line">        py = ny;</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">if</span>(nx &lt; sx) &#123;</span><br><span class="line">        sx = nx;</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">if</span>(ny &lt; sy) &#123;</span><br><span class="line">        sy = ny;</span><br><span class="line">      &#125;</span><br><span class="line">      dfs(nx, ny);</span><br><span class="line">      vis[nx][ny] = <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  <span class="built_in">scanf</span>(<span class="string">"%d%d"</span>, &amp;n, &amp;m);</span><br><span class="line">  <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++) &#123;</span><br><span class="line">    getchar();</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">1</span>; j &lt;= m; j++) &#123;</span><br><span class="line">      <span class="built_in">scanf</span>(<span class="string">"%c"</span>, &amp;Map[i][j]);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">1</span>; j &lt;= m; j++) &#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++) &#123;</span><br><span class="line">      <span class="keyword">if</span>(Map[i][j] == <span class="string">'1'</span>) &#123;</span><br><span class="line">        px = i;</span><br><span class="line">        py = j;</span><br><span class="line">        sx = i;</span><br><span class="line">        sy = j;</span><br><span class="line">        Map[i][j] = <span class="string">'2'</span>;</span><br><span class="line">        res[i][j] = <span class="number">1</span>;</span><br><span class="line">        dfs(i, j);</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%d %d\n"</span>, (px - sx + <span class="number">1</span>), (py - sy + <span class="number">1</span>));</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> k = sx; k &lt;= px; k++) &#123;</span><br><span class="line">          <span class="keyword">for</span>(<span class="keyword">int</span> p = sy; p &lt;= py; p++) &#123;</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">"%d"</span>, res[k][p]);</span><br><span class="line">            <span class="keyword">if</span>(res[k][p]) res[k][p] = <span class="number">0</span>;</span><br><span class="line">            <span class="keyword">if</span>(vis[k][p]) vis[k][p] = <span class="number">0</span>;</span><br><span class="line">          &#125;</span><br><span class="line">          <span class="built_in">printf</span>(<span class="string">"\n"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="C-nbsp-nbsp-nbsp-nbsp-bfs"><a href="#C-nbsp-nbsp-nbsp-nbsp-bfs" class="headerlink" title="C++&nbsp;&nbsp;&nbsp;&nbsp;bfs"></a>C++&nbsp;&nbsp;&nbsp;&nbsp;bfs</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">char</span> Map[<span class="number">505</span>][<span class="number">505</span>];</span><br><span class="line"><span class="keyword">int</span> res[<span class="number">505</span>][<span class="number">505</span>];</span><br><span class="line"><span class="keyword">int</span> vis[<span class="number">505</span>][<span class="number">505</span>];</span><br><span class="line"><span class="keyword">int</span> sx, sy, px, py;</span><br><span class="line"><span class="keyword">int</span> dx[<span class="number">4</span>] = &#123;<span class="number">1</span>, <span class="number">0</span>, <span class="number">-1</span>, <span class="number">0</span>&#125;;</span><br><span class="line"><span class="keyword">int</span> dy[<span class="number">4</span>] = &#123;<span class="number">0</span>, <span class="number">1</span>, <span class="number">0</span>, <span class="number">-1</span>&#125;;</span><br><span class="line"><span class="keyword">int</span> n, m;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Point</span> &#123;</span></span><br><span class="line">  <span class="keyword">int</span> x, y;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">bfs</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> y)</span> </span>&#123;</span><br><span class="line">  <span class="built_in">queue</span>&lt;Point&gt; <span class="built_in">queue</span>;</span><br><span class="line">  Point now;</span><br><span class="line">  now.x = x;</span><br><span class="line">  now.y = y;</span><br><span class="line">  <span class="built_in">queue</span>.push(now);</span><br><span class="line">  vis[x][y] = <span class="number">1</span>;</span><br><span class="line">  <span class="keyword">while</span>(!<span class="built_in">queue</span>.empty()) &#123;</span><br><span class="line">    now = <span class="built_in">queue</span>.front();</span><br><span class="line">    <span class="built_in">queue</span>.pop();</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">4</span>; i++) &#123;</span><br><span class="line">      Point next;</span><br><span class="line">      next.x = now.x + dx[i];</span><br><span class="line">      next.y = now.y + dy[i];</span><br><span class="line">      <span class="keyword">if</span>(next.x &gt; <span class="number">0</span> &amp;&amp; next.x &lt;= n &amp;&amp; next.y &gt; <span class="number">0</span> &amp;&amp; next.y &lt;= m &amp;&amp; vis[next.x][next.y] == <span class="number">0</span> &amp;&amp; Map[next.x][next.y] == <span class="string">'1'</span>) &#123;</span><br><span class="line">        vis[next.x][next.y] = <span class="number">1</span>;</span><br><span class="line">        res[next.x][next.y] = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">if</span>(next.x &gt; px) px = next.x;</span><br><span class="line">        <span class="keyword">if</span>(next.y &gt; py) py = next.y;</span><br><span class="line">        <span class="keyword">if</span>(next.x &lt; sx) sx = next.x;</span><br><span class="line">        <span class="keyword">if</span>(next.y &lt; sy) sy = next.y;</span><br><span class="line">        Map[next.x][next.y] = <span class="string">'2'</span>;</span><br><span class="line">        <span class="built_in">queue</span>.push(next);</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  <span class="built_in">scanf</span>(<span class="string">"%d%d"</span>, &amp;n, &amp;m);</span><br><span class="line">  <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++) &#123;</span><br><span class="line">    getchar();</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">1</span>; j &lt;= m; j++) &#123;</span><br><span class="line">      <span class="built_in">scanf</span>(<span class="string">"%c"</span>, &amp;Map[i][j]);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">1</span>; j &lt;= m; j++) &#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++) &#123;</span><br><span class="line">      <span class="keyword">if</span>(Map[i][j] == <span class="string">'1'</span>) &#123;</span><br><span class="line">        px = i;</span><br><span class="line">        py = j;</span><br><span class="line">        sx = i;</span><br><span class="line">        sy = j;</span><br><span class="line">        vis[i][j] = <span class="string">'2'</span>;</span><br><span class="line">        res[i][j] = <span class="number">1</span>;</span><br><span class="line">        bfs(i, j);</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%d %d\n"</span>, (px - sx + <span class="number">1</span>), (py - sy + <span class="number">1</span>));</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> k = sx; k &lt;= px; k++) &#123;</span><br><span class="line">          <span class="keyword">for</span>(<span class="keyword">int</span> p = sy; p &lt;= py; p++) &#123;</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">"%d"</span>, res[k][p]);</span><br><span class="line">            <span class="keyword">if</span>(res[k][p]) res[k][p] = <span class="number">0</span>;</span><br><span class="line">            <span class="keyword">if</span>(vis[k][p]) vis[k][p] = <span class="number">0</span>;</span><br><span class="line">          &#125;</span><br><span class="line">          <span class="built_in">printf</span>(<span class="string">"\n"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+            <div class="post-copyright">
+    <div class="content">
+        <p>最后更新： 2018年12月17日 18:45</p>
+        <p>原始链接： <a class="post-url" href="/2018/12/17/hihoCoder  Week232 question01/" title="hiho一下   第232周">http://yoursite.com/2018/12/17/hihoCoder  Week232 question01/</a></p>
+        <footer>
+            <a href="http://yoursite.com">
+                <img src="/images/logo.jpg" alt="dailingx">
+                dailingx
+            </a>
+        </footer>
+    </div>
+</div>
+
+      
+        
+            
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;">赏</a>
+</div>
+
+<div id="reward" class="post-modal reward-lay">
+    <a class="close" href="javascript:;" id="reward-close">×</a>
+    <span class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        请我吃糖~
+        <i class="icon icon-quote-right"></i>
+    </span>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/images/wechat_code.jpg" alt="打赏二维码">
+        </div>
+        <div class="reward-select">
+            
+            <label class="reward-select-item checked" data-id="wechat" data-wechat="/images/wechat_code.jpg">
+                <img class="reward-select-item-wechat" src="/images/wechat.png" alt="微信">
+            </label>
+            
+            
+            <label class="reward-select-item" data-id="alipay" data-alipay="/images/alipay_code.jpg">
+                <img class="reward-select-item-alipay" src="/images/alipay.png" alt="支付宝">
+            </label>
+            
+        </div>
+    </div>
+</div>
+
+
+        
+    </div>
+    <footer class="article-footer">
+        
+        
+<div class="post-share">
+    <a href="javascript:;" id="share-sub" class="post-share-fab">
+        <i class="fa fa-share-alt"></i>
+    </a>
+    <div class="post-share-list" id="share-list">
+        <ul class="share-icons">
+          <li>
+            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2018/12/17/hihoCoder  Week232 question01/&title=《hiho一下   第232周》 — dailingx&pic=http://yoursite.comimages/logo.jpg" data-title="微博">
+              <i class="fa fa-weibo"></i>
+            </a>
+          </li>
+          <li>
+            <a class="weixin share-sns" id="wxFab" href="javascript:;" data-title="微信">
+              <i class="fa fa-weixin"></i>
+            </a>
+          </li>
+          <li>
+            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/12/17/hihoCoder  Week232 question01/&title=《hiho一下   第232周》 — dailingx&source=Ò»¸öÉXÉmµÄ²©¿Í£¬Éñ ÄÎðÅç" data-title="QQ">
+              <i class="fa fa-qq"></i>
+            </a>
+          </li>
+          <li>
+            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/12/17/hihoCoder  Week232 question01/" data-title="Facebook">
+              <i class="fa fa-facebook"></i>
+            </a>
+          </li>
+          <li>
+            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《hiho一下   第232周》 — dailingx&url=http://yoursite.com/2018/12/17/hihoCoder  Week232 question01/&via=http://yoursite.com" data-title="Twitter">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+          <li>
+            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2018/12/17/hihoCoder  Week232 question01/" data-title="Google+">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        </ul>
+     </div>
+</div>
+<div class="post-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;" id="wxShare-close">×</a>
+    <p>扫一扫，分享到微信</p>
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://yoursite.com/2018/12/17/hihoCoder  Week232 question01/" alt="微信分享二维码">
+</div>
+
+<div class="mask"></div>
+
+        
+        <ul class="article-footer-menu">
+            
+            
+  <li class="article-footer-tags">
+    <i class="fa fa-tags"></i>
+      
+    <a href="/tags/hihoCoder/" class="color5">hihoCoder</a>
+      
+  </li>
+
+        </ul>
+        
+    </footer>
+  </div>
+</article>
+
+
+    <aside class="post-toc-pos post-toc-top" id="post-toc">
+        <nav class="post-toc-wrap">
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#题目1：拆字游戏"><span class="post-toc-text">题目1：拆字游戏</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#样例"><span class="post-toc-text">样例</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#额外的样例"><span class="post-toc-text">额外的样例</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#思路"><span class="post-toc-text">思路</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#我的代码"><span class="post-toc-text">我的代码</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Java-nbsp-nbsp-nbsp-nbsp-dfs-bfs"><span class="post-toc-text">Java    dfs/bfs</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#C-nbsp-nbsp-nbsp-nbsp-dfs"><span class="post-toc-text">C++    dfs</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#C-nbsp-nbsp-nbsp-nbsp-bfs"><span class="post-toc-text">C++    bfs</span></a></li></ol></li></ol>
+        </nav>
+    </aside>
+    
+
+<nav id="article-nav">
+  
+  
+    <a href="/2018/12/12/HelloWord,Markdown/" id="article-nav-older" class="article-nav-link-wrap">
+      <span class="article-nav-title">HelloWorld,Markdown</span>
+      <i class="fa fa-hand-o-right" aria-hidden="true"></i>
+    </a>
+  
+</nav>
+
+
+
+    
+        <section class="livere" id="comments">
+<!-- 来必力City版安装代码 -->
+<div id="lv-container" data-id="city" data-uid="MTAyMC80MTUzNy8xODA4NA==">
+<script type="text/javascript">
+   (function(d, s) {
+       var j, e = d.getElementsByTagName(s)[0];
+
+       if (typeof LivereTower === 'function') { return; }
+
+       j = d.createElement(s);
+       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+       j.async = true;
+
+       e.parentNode.insertBefore(j, e);
+   })(document, 'script');
+</script>
+<noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+</div>
+<!-- City版安装代码已完成 -->
+</section>
+    
+</section>
+        
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+<p>
+    <span id="busuanzi_container_site_uv" style="display:none">
+        总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style="display:none">
+        总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+      <p>
+        Powered by  <a href="http://hexo.io/" target="_blank">Hexo</a>
+        Theme <a href="//github.com/wongminho/hexo-theme-miho" target="_blank">MiHo</a>
+      &copy; 2018 dailingx<br>
+      </p>
+      <span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+    </div>
+  </div>
+
+  <script>
+    var now = new Date(); 
+    function createtime() { 
+        var grt= new Date("12/10/2018 20:08:00");//此处修改你的建站时间或者网站上线时间 
+        now.setTime(now.getTime()+250); 
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+        document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 "; 
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
+    } 
+    setInterval("createtime()",250);
+  </script>
+</footer>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script>
+  var mihoConfig = {
+      root: "http://yoursite.com",
+      animate: true,
+      isHome: false,
+      share: true,
+      reward: 1
+  }
+</script>
+<div class="sidebar">
+    <div id="sidebar-search" title="Search">
+        <i class="fa fa-search"></i>
+    </div>
+    <div id="sidebar-category" title="Categories">
+        <i class="fa fa-book"></i>
+    </div>
+    <div id="sidebar-tag" title="Tags">
+        <i class="fa fa-tags"></i>
+    </div>
+    <div id="sidebar-top">
+        <span class="sidebar-top-icon"><i class="fa fa-angle-up"></i></span>
+    </div>
+    <div id="music163player">
+        <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="290" height="263" src="//music.163.com/outchain/player?type=0&id=2551717660&auto=0&height=430"></iframe>
+    </div>
+</div>
+<div class="sidebar-menu-box" id="sidebar-menu-box">
+    <div class="sidebar-menu-box-container">
+        <div id="sidebar-menu-box-categories">
+            <a class="category-link" href="/categories/Markdown/">Markdown</a><a class="category-link" href="/categories/算法/">算法</a>
+        </div>
+        <div id="sidebar-menu-box-tags">
+            <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/hihoCoder/" style="font-size: 10px;">hihoCoder</a> <a href="/tags/蓝桥杯/" style="font-size: 10px;">蓝桥杯</a>
+        </div>
+    </div>
+    <a href="javascript:;" class="sidebar-menu-box-close">&times;</a>
+</div>
+<div class="mobile-header-menu-nav" id="mobile-header-menu-nav">
+    <div class="mobile-header-menu-container">
+        <span class="title">Menus</span>
+        <ul class="mobile-header-menu-navbar">
+            
+            <li>
+                <a href="/">
+                    <i class="fa fa-home"></i><span>Home</span>
+                </a>
+            </li>
+            
+            <li>
+                <a href="/">
+                    <i class="fa fa-archive"></i><span>Archives</span>
+                </a>
+            </li>
+            
+            <li>
+                <a target="_blank" href="http://www.dailingx.cf/">
+                    <i class="fa fa-user"></i><span>About</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    <div class="mobile-header-tag-container">
+        <span class="title">Tags</span>
+        <div id="mobile-header-container-tags">
+            <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/hihoCoder/" style="font-size: 10px;">hihoCoder</a> <a href="/tags/蓝桥杯/" style="font-size: 10px;">蓝桥杯</a>
+        </div>
+    </div>
+</div>
+<div class="search-wrap">
+    <span class="search-close">&times;</span>
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+            <i class="icon icon-lg icon-chevron-left"></i>
+        </a>
+        <input class="search-field" placeholder="Search..." id="keywords">
+        <a id="search-submit" href="javascript:;">
+            <i class="fa fa-search"></i>
+        </a>
+    <div class="search-container" id="search-container">
+        <ul class="search-result" id="search-result">
+        </ul>
+    </div>
+</div>
+
+<div id="search-tpl">
+    <li class="search-result-item">
+        <a href="{url}" class="search-item-li">
+            <span class="search-item-li-title" title="{title}">{title}</span>
+        </a>
+    </li>
+</div>
+<script src="/js/search.js"></script>
+<script src="/js/main.js"></script>
+
+
+  <script src="//cdn.bootcss.com/particles.js/2.0.0/particles.min.js"></script>
+  <div id="particles"></div>
+  <script src="/js/particles.js"></script>
+
+
+
+
+
+
+
+  <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
+  <script src="//cdn.bootcss.com/scrollReveal.js/3.0.5/scrollreveal.js"></script>
+  <script src="/js/animate.js"></script>
+
+
+  <script src="/js/pop-img.js"></script>
+  <script>
+     $(".article-entry p img").popImg();
+  </script>
+
+  </div>
+</body>
+</html>
